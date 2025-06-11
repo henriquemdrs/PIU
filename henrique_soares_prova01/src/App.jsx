@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Butao from './componentes/Butao'
 import Card from './componentes/Card'
+import dados_carros from './componentes/dados_carro'
 
 function App() {
    const carros = [
@@ -40,14 +41,14 @@ function App() {
   cor: 'vermelho',
   ano: 2024},
 ];
-
+{/**/}
 const vermelho =carros.filter(card=>card.cor>="vermelho")
 
 return (
   <div className="card-container">
           {/* retorno de uma função para colocar as informações de modelo e ano dentro de uma div*/}
 
-    {carros.map((card, index) => (
+    {dados_carros.map((card, index) => (
       <Card
         key={index}
         ano={card.ano}
